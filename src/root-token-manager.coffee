@@ -21,6 +21,7 @@ class RootTokenManager
       projection = { uuid: true, token: true }
       @datastore.findOne { uuid }, projection, (error, device) =>
         return callback error if error?
+        return callback null, false unless device?
         hashedToken = device.token
         @_verifyTokenHash { token, hashedToken }, callback
 

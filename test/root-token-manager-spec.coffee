@@ -17,10 +17,10 @@ describe 'RootTokenManager', ->
   beforeEach ->
     @sut = new RootTokenManager {@uuidAliasResolver, @datastore}
 
-  beforeEach (done) ->
-    @datastore.insert { uuid: 'spiral' }, done
+  describe 'when device exists', ->
+    beforeEach (done) ->
+      @datastore.insert { uuid: 'spiral' }, done
 
-  describe 'when called', ->
     beforeEach (done) ->
       @sut.generateAndStoreToken { uuid: 'spiral' }, (error, @generatedToken) =>
         done error
@@ -35,3 +35,14 @@ describe 'RootTokenManager', ->
           return done error if error?
           expect(valid).to.be.true
           done()
+
+  describe 'when device does not exist', ->
+    beforeEach (done) ->
+      @sut.generateAndStoreToken { uuid: 'spiral' }, (error, @generatedToken) =>
+        done error
+
+    it 'should match the generated token', (done) ->
+      @sut.verifyToken { uuid: 'spiral', token: @generatedToken }, (error, valid) =>
+        return done error if error?
+        expect(valid).to.be.false
+        done()
