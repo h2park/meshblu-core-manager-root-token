@@ -2,8 +2,7 @@ bcrypt = require 'bcrypt'
 crypto = require 'crypto'
 
 class RootTokenManager
-  constructor: ({@datastore,@pepper,@uuidAliasResolver}) ->
-    throw new Error "Missing mandatory parameter: @pepper" unless @pepper?
+  constructor: ({@datastore,@uuidAliasResolver}) ->
 
   generateAndStoreToken: ({ uuid }, callback) =>
     @uuidAliasResolver.resolve uuid, (error, uuid) =>

@@ -7,7 +7,6 @@ RootTokenManager = require '../'
 
 describe 'RootTokenManager', ->
   beforeEach (done) ->
-    @pepper = 'im-a-pepper'
     @uuidAliasResolver = resolve: (uuid, callback) => callback(null, uuid)
     database = mongojs 'root-token-manager-test', ['things']
     @datastore = new Datastore
@@ -16,7 +15,7 @@ describe 'RootTokenManager', ->
     database.things.remove done
 
   beforeEach ->
-    @sut = new RootTokenManager {@uuidAliasResolver, @datastore, @pepper}
+    @sut = new RootTokenManager {@uuidAliasResolver, @datastore}
 
   beforeEach (done) ->
     @datastore.insert { uuid: 'spiral' }, done
