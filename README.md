@@ -2,10 +2,13 @@
 Meshblu Token Manager
 
 [![Build Status](https://travis-ci.org/octoblu/meshblu-core-manager-root-token.svg?branch=master)](https://travis-ci.org/octoblu/meshblu-core-manager-root-token)
-[![Code Climate](https://codeclimate.com/github/octoblu/meshblu-core-manager-root-token/badges/gpa.svg)](https://codeclimate.com/github/octoblu/meshblu-core-manager-root-token)
-[![Test Coverage](https://codeclimate.com/github/octoblu/meshblu-core-manager-root-token/badges/coverage.svg)](https://codeclimate.com/github/octoblu/meshblu-core-manager-root-token)
-[![npm version](https://badge.fury.io/js/meshblu-core-manager-root-token.svg)](http://badge.fury.io/js/meshblu-core-manager-root-token)
-[![Gitter](https://badges.gitter.im/octoblu/help.svg)](https://gitter.im/octoblu/help)
+[![Test Coverage](https://codecov.io/gh/octoblu/meshblu-core-manager-root-token/branch/master/graph/badge.svg)](https://codecov.io/gh/octoblu/meshblu-core-manager-root-token)
+[![Dependency status](http://img.shields.io/david/octoblu/meshblu-core-manager-root-token.svg?style=flat)](https://david-dm.org/octoblu/meshblu-core-manager-root-token)
+[![devDependency Status](http://img.shields.io/david/dev/octoblu/meshblu-core-manager-root-token.svg?style=flat)](https://david-dm.org/octoblu/meshblu-core-manager-root-token#info=devDependencies)
+[![Slack Status](http://community-slack.octoblu.com/badge.svg)](http://community-slack.octoblu.com)
+
+[![NPM](https://nodei.co/npm/meshblu-core-manager-root-token.svg?style=flat)](https://npmjs.org/package/meshblu-core-manager-root-token)
+
 
 
 ## Tokens Datastore Format
